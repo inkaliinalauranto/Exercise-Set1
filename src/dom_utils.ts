@@ -15,9 +15,9 @@ export function h3(text: string): HTMLElement {
     return h3
 }
 
-export function div(className: string): HTMLDivElement {
+export function div(id: string): HTMLDivElement {
     const div: HTMLDivElement = document.createElement("div")
-    div.className = className
+    div.id = id
     return div
 }
 

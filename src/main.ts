@@ -1,38 +1,16 @@
 import './style.css'
-import { itemModel, fetchTodos } from './services.ts'
-import { h1, h3, div, paragraph } from './dom_utils.ts'
+import { paragraphContainer, checkbox, label } from './fetch_and_dom_apis.ts'
+import { h1, h3 } from './dom_utils.ts'
+import './html_dom_api.ts'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
-const mainTitle: HTMLElement = h1("Tehtäväsetti 1 - 4 eri selainrajapintaa")
+// Määritellään kaksi geneeristä HTML-elementtiä ja yksi HTML-div-elementti, 
+// jotka lisätään myöhemmin diviin, jonka id on app.
+const mainTitle: HTMLElement = h1("Tehtäväsarja 1 - neljä verkkoselaimen eri rajapintaa")
 const exercise1Title: HTMLElement = h3("1. Otsikoiden haku kolmannen osapuolen API:sta fetch-rajapintaa hyödyntämällä")
-const paragraphContainer: HTMLDivElement = div("container")
+const exercise2Title: HTMLElement = h3("2. AbortControllerin käyttö useissa samoissa fetch-pyynnöissä")
+const exercise3Title: HTMLElement = h3("3. HTML DOM API:n hyödyntäminen")
 
-interface todoInfo {
-  title: string
-}
-
-const fetchTitles = async () => {
-  const data: itemModel[] = await fetchTodos()
-  const titles: string[] = data.map((todo: todoInfo) => {
-    return todo.title
-  })
-
-  const uniqueTitles: string[] = []
-  titles.forEach((title) => {
-    if (!uniqueTitles.includes(title)) {
-      uniqueTitles.push(title)
-    }
-  })
-
-  const uniqueParagraphTitles: HTMLParagraphElement[] = uniqueTitles
-    .map((title: string) => { 
-      return paragraph(title) 
-    })
-
-  paragraphContainer.append(...(uniqueParagraphTitles.slice(0, 10)))
-}
-
-await fetchTitles()
-
-app.append(mainTitle, exercise1Title, paragraphContainer)
+// Lisätään app-id:llä merkittyyn diviin yllä määritetyt HTML-elementit: 
+app.append(mainTitle, exercise1Title, paragraphContainer, exercise2Title, checkbox, label, exercise3Title)

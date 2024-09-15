@@ -1,13 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!--Tehtävä 3/4: hyödynnetään DOM API:a-->
+  <div class="container2">
+    <p>Syötä tietosi alla olevalle lomakkeelle. Pakolliset kentät on merkitty "*"-merkillä.</p>
+    <form action="" method="get" id="form">
+      <div class="inputdiv">
+        <p>
+          <label for="userName" required>Nimi:</label>
+          <input type="text" id="userName" /> (*)
+        </p>
+        <p>
+          <label for="userEmail">Sähköpostiosoite:</label>
+          <input type="email" id="userEmail" />
+        </p>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Send" id="sendButton" />
+      </div>
+    </form>
+  </div>
+  <!--------------------------------------->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
