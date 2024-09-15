@@ -39,6 +39,7 @@ export async function fetchTodos(): Promise<itemModel[]> {
 tehtäväobjektien otsikot */
 export const paragraphContainer: HTMLDivElement = div("container1");
 
+
 /* Muuttujaan fetchTitles määritellään asynkroninen anonyymi nuolifunktio, 
 jossa mock-dataa haetaan kolmannen osapuolen rajapinnasta. Lopuksi osa 
 alkuperäisessä datassa olevien objektien title-avaimien arvoista lisätään 

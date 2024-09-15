@@ -1,4 +1,4 @@
-// Tietotyyppien validointi ohjelmassa käytettäville objekteille: 
+// Tietotyypin validointi 3. osapuolen rajapintaobjektille: 
 export interface itemModel {
     userId: number
     id: number
