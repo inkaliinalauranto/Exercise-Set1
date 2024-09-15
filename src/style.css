@@ -1,8 +1,8 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
-    /* max-width: 800px;
-    margin: auto; */
+    max-width: 1000px;
+    margin: auto;
 }
 
 #container1, .container2 {
