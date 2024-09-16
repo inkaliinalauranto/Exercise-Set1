@@ -6,8 +6,8 @@ import './file_api.ts'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
-// Määritellään kaksi geneeristä HTML-elementtiä ja yksi HTML-div-elementti, 
-// jotka lisätään myöhemmin diviin, jonka id on app.
+/* Määritellään eri HTML-elementtejä, jotka lisätään myöhemmin diviin, jonka 
+id on app.*/
 const mainTitle: HTMLElement = h1("Tehtäväsarja 1 - neljä verkkoselaimen eri rajapintaa")
 const exercise1Title: HTMLElement = h3("1. Otsikoiden haku kolmannen osapuolen API:sta fetch-rajapintaa hyödyntämällä")
 const exercise1Details: HTMLParagraphElement = paragraph("Klikkaa kohdan 2 checkboxia.")

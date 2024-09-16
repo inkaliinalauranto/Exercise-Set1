@@ -44,7 +44,6 @@ export const paragraphContainer: HTMLDivElement = div("title-container");
 jossa mock-dataa haetaan kolmannen osapuolen rajapinnasta. Lopuksi osa 
 alkuperäisessä datassa olevien objektien title-avaimien arvoista lisätään 
 yhteen div-elementtiin paragraph-elementeiksi muutettuina. */
-///// Tarvitseekohan tätä funktiota tyypittää?
 export const fetchTitles = async () => {
   const data: itemModel[] = await fetchTodos();
   // Kerätään titles-merkkijono-arrayhyn data-arrayn objekteista 
