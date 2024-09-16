@@ -1,4 +1,6 @@
-// 4/4: hyödynnetään File API:a:
+// 4/4: hyödynnetään File API:a.
+/* Toteutettu mukaillen esimerkkiä 
+https://developer.mozilla.org/en-US/docs/Web/API/File_API#examples.
 
 /* Tyypitetään input- ja output-elementit. Koska on tiedossa, että ne ovat 
 varmasti index.html-tiedostossa voidaan ne merkitä "not nulleiksi" */
