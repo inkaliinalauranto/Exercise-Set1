@@ -1,3 +1,4 @@
+// Abstraktoidaan eri elementtien luonti yksittäisiin funktioihin: 
 function createGenericElement(type: string): HTMLElement {
     const element: HTMLElement = document.createElement(type)
     return element
