@@ -37,7 +37,7 @@ export async function fetchTodos(): Promise<itemModel[]> {
 
 /* Asetetaan myöhemmin tämän divin sisään fetchTodos-funktiolla haettujen 
 tehtäväobjektien otsikot */
-export const paragraphContainer: HTMLDivElement = div("container1");
+export const paragraphContainer: HTMLDivElement = div("title-container");
 
 
 /* Muuttujaan fetchTitles määritellään asynkroninen anonyymi nuolifunktio, 
@@ -85,16 +85,15 @@ export const label: HTMLLabelElement = document.createElement("label");
 label.innerText = "Näytä otsikot";
 
 
-/* Jos controller-muuttujalla on arvo, on funktiota, jossa käytetään 
-fetchiä, käytetty ja data jo haettu. Kutsutaan siis AbortControllerin 
-abort-metodia. Koska haetun datan sisällään pitämän div-elementin 
-display-ominaisuuden arvo voi olla none, muutetaan se oletusarvoon. 
-Muussa tapauksessa kutsutaan funktiota, joka parsii 3. osapuolen 
-rajapinnasta haettua dataa. */
+/* Jos controller-muuttujalla on arvo, on data jo haettu ja siihen liittyvää 
+fetch-funktiota käytetty. Kutsutaan siis AbortControllerin abort-metodia. 
+Koska haetun datan sisällään pitämän div-elementin display-ominaisuuden arvo 
+on tässä tapauksessa none, muutetaan se oletusarvoon. Muussa tapauksessa 
+kutsutaan funktiota, joka parsii 3. osapuolen rajapinnasta haettua dataa. */
 async function fetchOrAbort(containerDiv: HTMLDivElement): Promise<void> {
   if (controller) {
     controller.abort();
-    console.log("Fetchaus abortoidaan!")
+    console.log("Fetchaus abortoidaan, koska data on jo haettu")
     containerDiv.style.display = "grid";
   } else {
     await fetchTitles()
